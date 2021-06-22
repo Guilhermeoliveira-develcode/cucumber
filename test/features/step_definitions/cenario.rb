@@ -1,16 +1,25 @@
-Dado(/^eu tenho (\d+) laranjas\.$/) do |valor1|
-   puts valor1
-   @laranjas = valor1  
+Dado(/^que eu tenho (\d+) laranjas$/) do |valor1|
+   @laranjas = valor1
+   puts @laranjas
 end
- 
-Quando(/^eu como (\d+) laranjas\.$/) do |valor2|
-   puts valor2
-   @comer = valor2
-   @resultado = @laranjas - @comer
+  
+Quando(/^como (\d+) laranjas$/) do |valor2|
+    @comer = valor2
+    puts @comer
+    @resultado = Integer(@laranjas) - Integer(@comer)
 end
- 
-Então(/^eu vejo quantas laranjas sobraram\.$/) do
-   puts @resultado
-   expect(@resultado).to eq 8
+  
+Então(/^verifico quantas laranjas sobraram$/) do
+    puts @resultado
 end
- 
+
+Quando(/^compro (\d+) laranjas$/) do |valor3|
+    @comprar = valor3
+    puts @comprar
+    @comprar = Integer(@laranjas) + Integer(@comprar)
+end
+  
+Então(/^verifico quantas laranjas eu tenho$/) do
+    puts @comprar  
+end
+  

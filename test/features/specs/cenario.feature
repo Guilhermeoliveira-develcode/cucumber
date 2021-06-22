@@ -1,11 +1,13 @@
 #language: pt
 
-Funcionalidade: Cálculo de subtracao e soma.
+Funcionalidade: Calculo da subtracao e da soma
 
-Cenario: Fazer subtracao
-Dado eu tenho 10 laranjas.
-Quando eu como 2 laranjas.
-Então eu vejo quantas laranjas sobraram.
+Cenário: Fazer subtracao
+Dado que eu tenho 10 laranjas
+Quando como 2 laranjas
+Então verifico quantas laranjas sobraram
 
-
-
+Cenário: Fazer soma
+Dado que eu tenho 10 laranjas
+Quando compro 5 laranjas
+Então verifico quantas laranjas eu tenho
